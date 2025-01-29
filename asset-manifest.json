@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/arks-seo-tools/static/css/main.e3dac260.css",
+    "main.js": "/arks-seo-tools/static/js/main.2a036c55.js",
+    "index.html": "/arks-seo-tools/index.html",
+    "main.e3dac260.css.map": "/arks-seo-tools/static/css/main.e3dac260.css.map",
+    "main.2a036c55.js.map": "/arks-seo-tools/static/js/main.2a036c55.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3dac260.css",
+    "static/js/main.2a036c55.js"
+  ]
+}
