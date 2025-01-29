@@ -5,8 +5,6 @@ import { models } from "../../constants/models";
 interface SettingsDrawerProps {
     isOpen: boolean;
     onClose: () => void;
-    apiKey: string;
-    setApiKey: (key: string) => void;
     selectedModel: string;
     setSelectedModel: (model: string) => void;
 }
@@ -14,16 +12,12 @@ interface SettingsDrawerProps {
 const SettingsDrawer: React.FC<SettingsDrawerProps> = ({
     isOpen,
     onClose,
-    apiKey,
-    setApiKey,
     selectedModel,
     setSelectedModel,
 }) => {
-    const [tempApiKey, setTempApiKey] = useState<string>(apiKey);
     const [tempModel, setTempModel] = useState<string>(selectedModel);
 
     const handleSave = () => {
-        setApiKey(tempApiKey);
         setSelectedModel(tempModel);
         onClose();
     };
@@ -32,18 +26,6 @@ const SettingsDrawer: React.FC<SettingsDrawerProps> = ({
         <Drawer anchor="left" open={isOpen} onClose={onClose}>
             <List sx={{ width: 300, padding: 2 }}>
                 <Typography variant="h6">Settings</Typography>
-
-                <ListItem>
-                    <ListItemText primary="API Key" />
-                </ListItem>
-                <TextField
-                    type="password"
-                    fullWidth
-                    value={tempApiKey}
-                    onChange={(e) => setTempApiKey(e.target.value)}
-                    variant="outlined"
-                    sx={{ mb: 2 }}
-                />
 
                 <ListItem>
                     <ListItemText primary="Model" />

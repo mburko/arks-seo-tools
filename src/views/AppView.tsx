@@ -15,9 +15,10 @@ const AppView: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const [apiKey, setApiKey] = useState<string>(process.env.OPEN_ROUTER_TOKEN ?? '');
   const [selectedModel, setSelectedModel] = useState<string>("x-ai/grok-2-vision-1212");
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
+
+  const apiKey = process.env.REACT_APP_OPEN_ROUTER_TOKEN ?? '';
 
   const model = new SEOContentModel();
   const seoService = new OpenRouterSeoService(apiKey, selectedModel);
@@ -44,8 +45,6 @@ const AppView: React.FC = () => {
       <SettingsDrawer
         isOpen={isSidebarOpen}
         onClose={() => setIsSidebarOpen(false)}
-        apiKey={apiKey}
-        setApiKey={setApiKey}
         selectedModel={selectedModel}
         setSelectedModel={setSelectedModel}
       />
