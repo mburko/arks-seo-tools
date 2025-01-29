@@ -15,7 +15,7 @@ const AppView: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const [apiKey, setApiKey] = useState<string>(process.env.OPEN_ROUTER_TOKEN ?? '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');
+  const [apiKey, setApiKey] = useState<string>(process.env.OPEN_ROUTER_TOKEN ?? '');
   const [selectedModel, setSelectedModel] = useState<string>("x-ai/grok-2-vision-1212");
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
