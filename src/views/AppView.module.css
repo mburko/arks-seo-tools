@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.burgerButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  padding: 8px;
+  transition: color 0.2s;
+}
+
+.burgerButton:hover {
+  color: #007bff;
+}
+
+.header h1 {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  font-size: 1.5rem;
+}

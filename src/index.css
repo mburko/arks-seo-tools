@@ -1,0 +1,39 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+button {
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+textarea {
+  font-family: inherit;
+}
+
+select {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
